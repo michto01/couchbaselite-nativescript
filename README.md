@@ -1,4 +1,4 @@
-# CouchbaseLite Plugin for NativeScript
+# Couchbase-Lite Plugin for NativeScript
 
 The code for the Push Plugin for NativeScript.
 
