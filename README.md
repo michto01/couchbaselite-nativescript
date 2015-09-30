@@ -51,8 +51,9 @@ The code for the Push Plugin for NativeScript.
 
 ## Troubleshooting
 
-Go to platforms/ios folder, open the project in Xcode and add the following lines in build settings:
+Go to platforms/ios folder, open the project in Xcode and add the following flag under build settings:
 
 ```
   OTHER_LDFLAGS = $(inherited) -lsqlite3 –lz –framework CFNetwork –framework Security –framework SystemConfiguration
+
 ```
