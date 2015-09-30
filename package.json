@@ -1,0 +1,11 @@
+{
+  "name": "couchbase-lite",
+  "version": "1.0.0",
+  "main" :  "couchbase.js",
+  "nativescript": {
+    "platforms": {
+      "ios": "1.0.0",
+      "android": "1.1.0"
+    }
+  }
+}
