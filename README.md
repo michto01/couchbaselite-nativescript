@@ -45,11 +45,14 @@ The code for the Push Plugin for NativeScript.
 
 - Run the code
 
+```
 	tns run ios
-
+```
 
 ## Troubleshooting
 
 Go to platforms/ios folder, open the project in Xcode and add the following lines in build settings:
 
+```
   OTHER_LDFLAGS = $(inherited) -lsqlite3 –lz –framework CFNetwork –framework Security –framework SystemConfiguration
+```
