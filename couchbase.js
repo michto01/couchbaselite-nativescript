@@ -42,15 +42,8 @@ var CouchbaseLite = (function(){
    CouchbaseLite.prototype.updateDocument = function(documentId, data){
       var document = database.documentWithID(documentId);
 
-      var properties = document.properties;
-
-      for (var property in properties){
-          if (data[property]){
-            properties[property] = data[property];
-          }
-      }
       var errorRef = new interop.Reference();
-      var revision  = doc.putPropertiesError(data, errorRef);
+      var revision  = document.putPropertiesError(data, errorRef);
 
       if (revision){
           console.log("Document updated");
