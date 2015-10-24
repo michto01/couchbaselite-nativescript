@@ -2,19 +2,26 @@ var CouchbaseLite = (function(){
   var manager;
   var database;
 
+  var app = require("application");
+
   (function(){
     if (!manager) {
       try {
         var context = app.android.context;
-        manager = new com.couchbase.lite.Manager(new com.couchbase.lite.AndroidContext(context), com.couchbase.lite.Manager.DEFAULT_OPTIONS);
+
+        console.log("couchbase log");
+        console.log(new com.couchbase.lite.android.AndroidContext(context));
+
+        manager = new com.couchbase.lite.Manager(new com.couchbase.lite.android.AndroidContext(context), null);
+
       } catch(ex) {
-        console.log(ex.getMessage());
+        console.log(ex.message);
       }
     }
     try {
       database = manager.getDatabase('couchbase-lite');
     } catch (ex){
-       console.log(ex.getMessage());
+       console.log(ex.message);
     }
   })();
 
@@ -71,8 +78,8 @@ var CouchbaseLite = (function(){
         view.setMap(new com.couchbase.lite.Mapper({
            map: function (doc, emit) {
               emit(key, doc);
-          }
-        });
+            }
+        }));
 
         var query = view.createQuery();
 

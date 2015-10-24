@@ -10,8 +10,7 @@
 
     "android": {
       "dependencies" : {
-          "com.android.support:appcompat-v7": "21.0.3",
-          "couchbase-lite-android": "1.1.0"
+          "com.android.support": "21.0.3"
       }
     }
   }
