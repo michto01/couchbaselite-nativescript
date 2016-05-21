@@ -19,7 +19,7 @@ The code for the Push Plugin for NativeScript.
 
 ### iOS
 
-- Go to the application folder and add the Android platform to the application
+- Go to the application folder and add the iOS platform to the application
 
 		tns platform add ios
 
